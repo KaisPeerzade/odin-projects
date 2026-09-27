@@ -1,4 +1,4 @@
-```javascript
+
 // =========================
 // PLAYER FACTORY
 // =========================
@@ -294,4 +294,4 @@ restartButton.addEventListener("click", () => {
     GameController.restartGame();
 
 });
-```
+
