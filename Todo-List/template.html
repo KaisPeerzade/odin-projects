@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+
+<body>
+
+    <div class="app">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <span>✓</span>
+                Todo List
+            </div>
+
+            <button id="add-project-btn" class="add-project-btn">
+                + Add Project
+            </button>
+
+            <h3>Projects</h3>
+
+            <div id="project-list"></div>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <header class="top-bar">
+
+                <div>
+                    <h1 id="project-title">Inbox</h1>
+                    <p id="todo-count">0 tasks</p>
+                </div>
+
+                <button id="add-todo-btn" class="add-todo-btn">
+                    + Add Todo
+                </button>
+
+            </header>
+
+
+            <section id="todo-list" class="todo-list">
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- Todo Modal -->
+
+    <div id="todo-modal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2 id="todo-modal-title">Add Todo</h2>
+                <button id="close-todo-modal" class="close-btn">×</button>
+            </div>
+
+            <form id="todo-form">
+
+                <input type="hidden" id="todo-id">
+
+                <label for="todo-title">
+                    Title
+                </label>
+
+                <input
+                    type="text"
+                    id="todo-title"
+                    placeholder="What needs to be done?"
+                    required
+                >
+
+
+                <label for="todo-description">
+                    Description
+                </label>
+
+                <textarea
+                    id="todo-description"
+                    placeholder="Add a description..."
+                ></textarea>
+
+
+                <div class="form-row">
+
+                    <div>
+                        <label for="todo-date">
+                            Due Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="todo-date"
+                            required
+                        >
+                    </div>
+
+
+                    <div>
+                        <label for="todo-priority">
+                            Priority
+                        </label>
+
+                        <select id="todo-priority">
+
+                            <option value="low">
+                                Low
+                            </option>
+
+                            <option value="medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="high">
+                                High
+                            </option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <label for="todo-notes">
+                    Notes
+                </label>
+
+                <textarea
+                    id="todo-notes"
+                    placeholder="Additional notes..."
+                ></textarea>
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        id="cancel-todo"
+                        class="cancel-btn"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="save-btn"
+                    >
+                        Save Todo
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- Project Modal -->
+
+    <div id="project-modal" class="modal hidden">
+
+        <div class="modal-content small">
+
+            <div class="modal-header">
+
+                <h2>New Project</h2>
+
+                <button
+                    id="close-project-modal"
+                    class="close-btn"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="project-form">
+
+                <label for="project-name">
+                    Project Name
+                </label>
+
+                <input
+                    type="text"
+                    id="project-name"
+                    placeholder="e.g. College"
+                    required
+                >
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        id="cancel-project"
+                        class="cancel-btn"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="save-btn"
+                    >
+                        Create Project
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
