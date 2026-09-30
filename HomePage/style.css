@@ -1,0 +1,369 @@
+
+/* =====================================
+   1. GENERAL SETTINGS
+===================================== */
+
+/* Reusable colors */
+:root {
+  --primary: #155e75;
+  --secondary: #e0f2fe;
+  --text: #1f2937;
+  --muted: #64748b;
+  --background: #f8fafc;
+  --white: #ffffff;
+  --shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+}
+
+/* Apply to every element */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* =====================================
+   2. ABOUT SECTION
+===================================== */
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  padding: 70px 8%;
+  background-color: var(--secondary);
+}
+
+/* Profile image */
+.profile {
+  position: relative;
+  width: 320px;
+  height: 350px;
+  flex-shrink: 0;
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+/* Name over the image */
+.profile h1 {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+
+  color: var(--white);
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 2px 2px 5px #000000;
+}
+
+/* About text box */
+.about-content {
+  max-width: 600px;
+  padding: 35px;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.about-content h2,
+.projects-section > h2,
+.contact-content h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.about-content p {
+  color: var(--muted);
+  font-size: 17px;
+}
+
+/* Social media links */
+.social-links {
+  display: flex;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* =====================================
+   3. PROJECTS SECTION
+===================================== */
+
+.projects-section {
+  padding: 70px 8%;
+}
+
+.projects-section > h2 {
+  margin-bottom: 30px;
+}
+
+/* Three-column project layout */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+
+/* Individual project card */
+.project-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Project screenshot area */
+.project-image {
+  height: 190px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Placeholder banners */
+.weather {
+  background: linear-gradient(135deg, #0284c7, #7dd3fc);
+}
+
+.todo {
+  background: linear-gradient(135deg, #7c3aed, #c4b5fd);
+}
+
+.scheduler {
+  background: linear-gradient(135deg, #0f766e, #5eead4);
+}
+
+.tic-tac-toe {
+  background: linear-gradient(135deg, #b45309, #fcd34d);
+}
+
+.restaurant {
+  background: linear-gradient(135deg, #be123c, #fda4af);
+}
+
+.library {
+  background: linear-gradient(135deg, #334155, #94a3b8);
+}
+
+.placeholder {
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Project information */
+.project-info {
+  padding: 20px;
+}
+
+.project-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.project-heading h3 {
+  font-size: 20px;
+}
+
+.project-heading a {
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.project-heading a:hover {
+  text-decoration: underline;
+}
+
+.project-info p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* =====================================
+   4. CONTACT SECTION
+===================================== */
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+
+  padding: 60px 8%;
+  background-color: var(--secondary);
+}
+
+.contact-content {
+  max-width: 550px;
+}
+
+.contact-content p {
+  margin-bottom: 12px;
+}
+
+.contact-content a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-content a:hover {
+  text-decoration: underline;
+}
+
+.contact-image {
+  width: 280px;
+  height: 300px;
+  flex-shrink: 0;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* =====================================
+   5. TABLET RESPONSIVENESS
+===================================== */
+
+@media (max-width: 1000px) {
+  .about-section {
+    gap: 25px;
+    padding: 50px 5%;
+  }
+
+  .profile {
+    width: 260px;
+    height: 300px;
+  }
+
+  .about-content {
+    padding: 25px;
+  }
+
+  /* Two project columns on tablets */
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .projects-section,
+  .contact-section {
+    padding: 50px 5%;
+  }
+}
+
+/* =====================================
+   6. MOBILE RESPONSIVENESS
+===================================== */
+
+@media (max-width: 600px) {
+  /* Stack photo and about text */
+  .about-section {
+    flex-direction: column;
+    gap: 25px;
+    padding: 35px 20px;
+  }
+
+  .profile {
+    width: 100%;
+    max-width: 320px;
+    height: 320px;
+  }
+
+  .profile h1 {
+    font-size: 27px;
+  }
+
+  .about-content {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .about-content h2,
+  .projects-section > h2,
+  .contact-content h2 {
+    font-size: 28px;
+  }
+
+  /* One project column on mobile */
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .projects-section {
+    padding: 40px 20px;
+  }
+
+  /* Stack contact text and image */
+  .contact-section {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 40px 20px;
+    gap: 25px;
+  }
+
+  .contact-image {
+    width: 100%;
+    height: 260px;
+  }
+}
