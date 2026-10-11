@@ -20,4 +20,4 @@ npm run build
 ## Deploy
 Deployed on Vercel. `vercel.json` rewrites all routes to `index.html` so React Router works on refresh.
 
-Live demo: _add your Vercel link here_
+Live demo:https://odin-projects-beige.vercel.app/
